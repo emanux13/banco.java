@@ -1,4 +1,5 @@
 public class Corrente extends Conta {
+    public double saldo=10000;
     public Corrente(double valorsaque, double deposito) {
         super(valorsaque, deposito);
     }
@@ -6,13 +7,13 @@ public class Corrente extends Conta {
     @Override
     public double sacar() {
        
-        return getValorsaque();
+        return getValorsaque()- 2;
     }
 
     @Override
     public double sacar(double desconto) {
        
-        return getValorsaque() * (1 - desconto);
+        return getValorsaque();
     }
 
     @Override
